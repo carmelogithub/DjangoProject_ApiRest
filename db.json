@@ -1,0 +1,16 @@
+{
+  "submisiones": [
+    {
+      "id": "5ab8",
+      "nombre": "laura",
+      "email": "carmelo_es@hotmail.com",
+      "accion": "generar"
+    },
+    {
+      "id": "2bb9",
+      "nombre": "laura",
+      "email": "carmelo.escribano1@gmail.com",
+      "accion": "generar"
+    }
+  ]
+}

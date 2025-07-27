@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log por fecha</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+  <h1>Selecciona un día del log</h1>
+
+  <form method="get">
+    <input type="text" name="fecha" id="fecha" placeholder="Selecciona una fecha">
+    <button type="submit">Consultar log</button>
+  </form>
+
+  <script>
+    flatpickr("#fecha", {
+      dateFormat: "Y-m-d",
+      defaultDate: "{{ selected_date }}"
+    });
+  </script>
+
+  {% if selected_date %}
+    <h2>Log del {{ selected_date }}</h2>
+    <pre>{{ log_output }}</pre>
+  {% endif %}
+</body>
+</html>
