@@ -1,15 +1,21 @@
 {
-  "submisiones": [
+  "contactos": [
     {
-      "id": "5ab8",
-      "nombre": "laura",
-      "email": "carmelo_es@hotmail.com",
+      "id": "7680",
+      "nombre": "sofia",
+      "email": "sofia@gmail.com",
       "accion": "generar"
     },
     {
-      "id": "2bb9",
-      "nombre": "laura",
-      "email": "carmelo.escribano1@gmail.com",
+      "id": "b741",
+      "nombre": "marta",
+      "email": "marta@gmail.com",
+      "accion": "analizar"
+    },
+    {
+      "id": "4364",
+      "nombre": "eva",
+      "email": "eva@gmail.com",
       "accion": "generar"
     }
   ]

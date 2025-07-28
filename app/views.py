@@ -1,4 +1,5 @@
 # core/views.py
+
 from django.shortcuts import render
 from .forms import AccionForm
 from .services import procesar_datos
@@ -20,7 +21,7 @@ def formulario_view(request):
             # Enviar a API externa (opcional)
             try:
                 response = requests.post(
-                    'http://localhost:3001/submisiones',
+                    'http://localhost:3001/contactos',
                     json={
                         'nombre': nombre,
                         'email': email,
@@ -40,3 +41,13 @@ def formulario_view(request):
 
     return render(request, 'app/form.html',
                   {'form': form, 'resultado': resultado})
+
+def vista_lista(request):
+    datos=[]
+    try:
+        response=requests.get('http://localhost:3001/contactos',timeout=5)
+        if response.status_code == 200:
+            datos=response.json()
+    except Exception as e:
+        print(f"Error al conectar {e}")
+    return render(request, 'app/lista.html',{'datos': datos})
